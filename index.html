@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafe Gurl</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar"></div>
+    </div>
+
+    <div id="splash-screen">
+        <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772271198/Picsart_26-02-28_14-55-46-305_utpfha.png"  class="splash-logo">
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772271198/Picsart_26-02-28_14-55-46-305_utpfha.png" alt="Cafe Gurl Logo" class="logo">
+            <span class="logo-text"><span class="logo-cafe">Cafe </span><span class="logo-gurl">Gurl</span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">₹0</span>
+            </div>
+            <button class="btn checkout-btn">Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <div id="order-success-popup" class="popup">
+        <div class="popup-content">
+            <div class="tick-container">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Order Placed!</h3>
+            <p>Your coffee is being brewed.</p>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1><span class="hero-welcome">Welcome</span></h1>
+            <p>Where every cup is brewed with passion and every bite feels like home.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about" style="position: relative; overflow: hidden;">
+        <div class="particles-container" style="z-index: 2; position: absolute; pointer-events: none;">
+            <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772283071/3eb13a43-8995-422d-8297-332b6026b3ed_removalai_preview_1_zey5td.png" class="floating-obj cup-float" style="top: 15%; left: 10%; animation-delay: 0s;">
+            <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772283070/b5ac74b8-ea41-4838-855f-25939994653e_removalai_preview_1_g7ehra.png" class="floating-obj bean" style="top: 25%; left: 85%; width: 50px; animation-delay: 1s;">
+            <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772283070/b5ac74b8-ea41-4838-855f-25939994653e_removalai_preview_1_g7ehra.png" class="floating-obj bean" style="top: 70%; left: 15%; width: 90px; animation-delay: 2s; transform: rotate(45deg);">
+            <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772283070/b5ac74b8-ea41-4838-855f-25939994653e_removalai_preview_1_g7ehra.png" class="floating-obj cup-float" style="top: 60%; left: 80%; width: 80px; animation-delay: 3s; filter: blur(1px);">
+            <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772283072/8832f1ac-1f08-4cc8-a65b-9de3ab3c0855_removalai_preview_1_aaixnh.png" class="floating-obj bean" style="top: 40%; left: 5%; width: 30px; animation-delay: 1.5s; filter: blur(2px);">
+        </div>
+        <div class="about-img" style="z-index: 1;">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cozy Cafe Interior">
+        </div>
+        <div class="about-text">
+            <h2 class="section-title">Our Story</h2>
+            <p>At Cafe Gurl, we believe that coffee is more than just a drink—it's an experience. Nestled in the heart of the city, our cozy space offers a sanctuary for dreamers, thinkers, and coffee lovers alike.</p>
+            <p>Founded with a love for rich aromas and warm conversations, we source the finest beans and bake our pastries fresh every morning. Come sit with us, take a sip, and let the world slow down for a moment.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="menu-header">
+            <h2 class="section-title">Coffee Selection</h2>
+            <p>Premium blends for the true connoisseur.</p>
+        </div>
+        <div class="menu-grid">
+            <div class="menu-item" data-id="1" data-name="Filter Coffee" data-price="80">
+                <div class="menu-img-container">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cappuccino" class="menu-img">
+                </div>
+                <div class="menu-details">
+                    <div class="menu-title">
+                        <span>Filter Coffee</span>
+                        <span class="price">₹80</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="btn order-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-id="2" data-name="Instant Coffee" data-price="70">
+                <div class="menu-img-container">
+                    <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772287014/images_hqqzry.jpg" class="menu-img">
+                </div>
+                <div class="menu-details">
+                    <div class="menu-title">
+                        <span>Instant Coffee</span>
+                        <span class="price">₹70</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="btn order-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-id="3" data-name="Bru Coffee" data-price="75">
+                <div class="menu-img-container">
+                    <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772287014/download_27_uhkmco.jpg" alt="Espresso" class="menu-img">
+                </div>
+                <div class="menu-details">
+                    <div class="menu-title">
+                        <span>Bru Coffee</span>
+                        <span class="price">₹75</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="btn order-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-id="4" data-name="Cold Coffee" data-price="85">
+                <div class="menu-img-container">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Frappe" class="menu-img">
+                </div>
+                <div class="menu-details">
+                    <div class="menu-title">
+                        <span>Cold Coffee</span>
+                        <span class="price">₹85</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="btn order-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-id="5" data-name="Black Coffee" data-price="60">
+                <div class="menu-img-container">
+                    <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772287014/download_29_s724kp.jpg" alt="Americano" class="menu-img">
+                </div>
+                <div class="menu-details">
+                    <div class="menu-title">
+                        <span>Black Coffee</span>
+                        <span class="price">₹60</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="btn order-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-id="6" data-name="Dalgona Coffee" data-price="95">
+                <div class="menu-img-container">
+                    <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772287014/download_30_w5vfn6.jpg" alt="Mocha" class="menu-img">
+                </div>
+                <div class="menu-details">
+                    <div class="menu-title">
+                        <span>Dalgona Coffee</span>
+                        <span class="price">₹95</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="btn order-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item" data-id="7" data-name="Boba Coffee" data-price="100">
+                <div class="menu-img-container">
+                    <img src="https://res.cloudinary.com/ds5lkbrqe/image/upload/v1772287014/download_28_voo7t4.jpg" alt="Cold Brew" class="menu-img">
+                </div>
+                <div class="menu-details">
+                    <div class="menu-title">
+                        <span>Boba Coffee</span>
+                        <span class="price">₹90</span>
+                    </div>
+                    <div class="item-controls">
+                        <button class="btn order-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="banner">
+        <h2>"Life happens, coffee helps."</h2>
+        <p>Join our loyalty program and get your 10th cup free!</p>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Cafe Gurl</h3>
+                <p>Brewing happiness one cup at a time.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Trichy</p>
+                <p><i class="fas fa-phone"></i> 9876543210</p>
+                <p><i class="fas fa-envelope"></i> order@cafegurl.com</p>
+            </div>
+            <div class="footer-col">
+                <h3>Opening Hours</h3>
+                <p>Mon - Fri: 7am - 8pm</p>
+                <p>Sat - Sun: 8am - 9pm</p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+
