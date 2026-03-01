@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
     const menuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
@@ -17,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Header Scroll Effect
     const header = document.querySelector('header');
     const logo = document.querySelector('.logo');
     const logoText = document.querySelector('.logo-text');
@@ -48,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth Scroll for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -69,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Custom Cursor Logic
     const cursor = document.querySelector('.cursor');
     
     if (cursor) {
@@ -88,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Scroll Progress Bar
     const progressBar = document.querySelector('.scroll-progress-bar');
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
@@ -99,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Text Reveal Animation for Hero Title
     const heroTitle = document.querySelector('.hero h1');
     if (heroTitle) {
         const text = heroTitle.textContent;
@@ -108,17 +101,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const span = document.createElement('span');
             span.textContent = word + ' ';
             span.classList.add('word');
-            span.style.transitionDelay = `${index * 0.1 + 1.5}s`; // Start after splash
+            span.style.transitionDelay = `${index * 0.1 + 1.5}s`; 
             heroTitle.appendChild(span);
             
-            // Trigger animation after a slight delay
             setTimeout(() => {
                 span.classList.add('visible');
-            }, 100);
+            }, 400);
         });
     }
 
-    // Cart Logic
     const cartBtn = document.getElementById('cart-btn');
     const closeCartBtn = document.getElementById('close-cart');
     const cartSidebar = document.getElementById('cart-sidebar');
@@ -130,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let cart = [];
 
-    // Open Cart
     if (cartBtn) {
         cartBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -138,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close Cart
     if (closeCartBtn) {
         closeCartBtn.addEventListener('click', closeCart);
     }
@@ -156,8 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartOverlay.classList.remove('active');
     }
 
-    // Add to Cart
-    orderBtns.forEach(btn => {
+   orderBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             const menuItem = e.target.closest('.menu-item');
             const id = menuItem.dataset.id;
@@ -167,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             addToCart({ id, name, price, qty });
             
-            // Button Feedback Animation with ripple effect
             const ripple = document.createElement('span');
             ripple.style.position = 'absolute';
             ripple.style.width = '10px';
