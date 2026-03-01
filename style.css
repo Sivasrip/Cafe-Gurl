@@ -3,7 +3,7 @@
     --light-brown: #A27244;
     --white: #ffffff;
     --brown: #d48c58;
-    --cream: #ffffff;
+    --cream: #eee2d8;
     --text-dark: #333;
     --font-heading: 'RK';
     --font-body: 'KR';
@@ -1338,3 +1338,4 @@ footer {
         font-size: 3rem;
     }
 }
+
