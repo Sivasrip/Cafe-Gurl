@@ -1,9 +1,9 @@
 :root {
     --primary-brown: #5E2F13;
     --light-brown: #A27244;
-    --white: #ffffff;
+    --white: #f4e4db;
     --brown: #d48c58;
-    --cream: #f9f5f0;
+    --cream: #eee2d8;
     --text-dark: #333;
     --font-heading: 'RK';
     --font-body: 'KR';
@@ -261,12 +261,21 @@ nav a:hover::after {
     transform-style: preserve-3d;
 }
 
+
+
+.hero h1 .word {
+    margin-right: 8px;
+}
 .hero h1 {
     font-family: var(--font-heading);
     font-size: 4rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     white-space: normal;
+    word-spacing: 10px;
+        letter-spacing: 3px;
+
+
 }
 
 .hero-welcome {
@@ -1001,11 +1010,7 @@ footer {
     }
 }
 
-@media (min-width: 1025px) {
-    .menu-item:nth-child(8) {
-        display: none;
-    }
-}
+
 
 @media (max-width: 1024px) {
     .hero h1 {
